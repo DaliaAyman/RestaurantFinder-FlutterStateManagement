@@ -2,3 +2,4 @@ config.dart
 build/app/intermediates
 build
 android/.gradle
+.idea
