@@ -6,6 +6,7 @@ import 'package:restaurant_finder/data/restaurant.dart';
 import 'package:restaurant_finder/ui/widgets/restaurant_tile.dart';
 
 import 'favorite_page.dart';
+import 'location_page.dart';
 
 class RestaurantPage extends StatelessWidget {
   final Location location;
@@ -25,6 +26,13 @@ class RestaurantPage extends StatelessWidget {
         ],
       ),
       body: _buildSearch(context),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.edit_location),
+          onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) =>
+            LocationPage(title: 'Where do you want to eat?', isFullScreenDialog: true,)
+          ));
+      }),
     );
   }
 

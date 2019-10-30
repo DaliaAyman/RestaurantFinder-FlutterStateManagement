@@ -8,7 +8,7 @@ class LocationPage extends StatelessWidget {
   final String title;
   final bool isFullScreenDialog;
 
-  LocationPage({Key key, this.title, this.isFullScreenDialog = false})
+  LocationPage({Key key, @required this.title, this.isFullScreenDialog = false})
       : super(key: key);
 
   @override
@@ -37,10 +37,6 @@ class LocationPage extends StatelessWidget {
               child: _buildResults(bloc),
             )
           ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
         ),
       ),
     );
